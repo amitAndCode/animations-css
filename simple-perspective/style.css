@@ -1,0 +1,17 @@
+body {
+    perspective: 1000px;
+}
+
+.box {
+    background-color: aqua;
+    width: 300px;
+    height: 200px;
+    margin: auto;
+    margin-top: 200px;
+    transition: all 1s ease;
+    transform-origin: top left;
+}
+
+.box:hover {
+    transform: rotate(90deg);
+}
