@@ -1,0 +1,38 @@
+body {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-animate {
+    display: inline-block;
+    border: 1px solid black;
+    padding: 20px 40px;
+    position: relative;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.bg-animate:hover {
+    cursor: pointer;
+}
+
+.bg-animate:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: yellow;
+    width: 200%;
+    height: 100%;
+    z-index: -1;
+    transform-origin: top left;
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
+}
+
+.bg-animate:hover:before {
+    transform: rotate(0deg);
+    cursor: pointer;
+}
